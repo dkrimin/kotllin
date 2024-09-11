@@ -17,7 +17,7 @@ fun main() {
     println("task#3")
 
     var a = 8.0
-    var c = a
+    var c = 6.0
 
     var s: Double
     s = 0.5 * a * c
