@@ -1,6 +1,6 @@
 import kotlin.math.sqrt
 
-fun main() {
+    fun main() {
     val qqq = "i can"
     val www = "code"
     println("task#1")
