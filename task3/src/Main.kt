@@ -1,4 +1,4 @@
-fun main() {
+    fun main() {
     println("task#1")
     println("task#1")
 

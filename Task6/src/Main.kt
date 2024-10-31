@@ -1,5 +1,5 @@
 fun filterThree(input: MutableList<Int>): MutableList<Int> {
-    var output: MutableList<Int> = mutableListOf()
+   var output: MutableList<Int> = mutableListOf()
     for (i in input) {
         if (modThree(i) ) {
             output.add(i)
