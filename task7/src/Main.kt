@@ -1,23 +1,33 @@
 import kotlin.random.Random
 
 
-class Employee() {
-    var salary: Int = 0
-    lateinit var name: String
-    lateinit var surname: String
-}
+data class Employee(val name: String, val surname: String, val salary: Int)
 
+val names = arrayOf("John", "Aaron", "Tim", "Ted", "Steven")
+val surnames = arrayOf("Smith", "Dow", "Isaacson", "Pennyworth", "Jankins")
 
 fun main() {
-    var qqq = Employee()
-    qqq.salary = 1234
-    qqq.surname = "Galinov"
-qqq.name = "Slava"
-    println(qqq.name+" "+qqq.surname+"@@"+qqq.salary)
-     val names: List<String> = listOf("John", "Aaron", "Tim", "Ted", "Steven")
-    val surnames: List<String> = listOf("Smith", "Dow", "Isaacson", "Pennyworth", "Jankins")
-     println(names)
-    println(surnames)
+
+    val employees = mutableListOf<Employee>()
+    repeat(10) {
+        val name = names.random() // Случайное имя
+        val surname = surnames.random() // Случайная фамилия
+        val salary = Random.nextInt(1000, 2001) // Случайная зарплата
+        employees.add(Employee(name, surname, salary))
+    }
 
 
+    println("Все сотрудники:")
+    employees.forEach {
+        println("${it.name} ${it.surname}'s salary is $${it.salary}")
+    }
+
+
+    val evenSalaryEmployees = employees.filter { it.salary % 2 == 0 }
+
+
+    println("\nСотрудники с четной зарплатой:")
+    evenSalaryEmployees.forEach {
+        println("${it.name} ${it.surname}'s salary is $${it.salary}")
+    }
 }
