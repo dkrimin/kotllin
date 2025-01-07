@@ -1,1 +1,6 @@
 Слава бля у меня получилось!!!
+
+попытка №2
+
+  git config --global user.email "d.krimin@gmail.com"                                                                      
+  git config --global user.name "dkrimin"                                                                             
